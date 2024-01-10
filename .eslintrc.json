@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "overrides": [
+        {
+            "files": ["test/**/*.ts"],
+            "extends": ["plugin:playwright/recommended"],
+            "rules": {
+              "playwright/no-force-option": "off",
+              "playwright/no-skipped-test": "off",
+              "playwright/prefer-to-be": "warn",
+              "playwright/prefer-to-contain": "warn",
+              "playwright/prefer-to-have-length": "warn",
+              "playwright/require-top-level-describe": "warn"
+            }
+          }
+      
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+"prettier/prettier": "error"
+    },
+    "plugins":["prettier", "playwright"],
+    "extends":["prettier", "plugin:prettier/recommended", "standard-with-typescript"]
+}
