@@ -2,7 +2,9 @@
   "name": "swag-labs-pw",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "open-ui-mode": "npx playwright test --ui"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agatawyc/swag-labs-PW.git"
