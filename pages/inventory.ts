@@ -4,8 +4,8 @@ import { ProductDetails } from './product-details';
 import { ShoppingCart } from './shopping-cart';
 
 export class Inventory {
-  page: Page;
-  shoppingCartButton: ShoppingCartButton;
+  readonly page: Page;
+  readonly shoppingCartButton: ShoppingCartButton;
 
   constructor(page: Page) {
     this.page = page;

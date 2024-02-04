@@ -2,10 +2,10 @@ import { Locator, Page } from '@playwright/test';
 import { ShoppingCartButton } from './components/shopping-cart-button';
 
 export class ShoppingCart {
-  page: Page;
-  addToCartButton: Locator;
-  shoppingCartButton: ShoppingCartButton;
-  inventoryItemName: Locator;
+  readonly page: Page;
+  readonly addToCartButton: Locator;
+  readonly shoppingCartButton: ShoppingCartButton;
+  readonly inventoryItemName: Locator;
 
   constructor(page: Page) {
     this.page = page;

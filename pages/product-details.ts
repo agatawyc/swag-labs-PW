@@ -3,9 +3,9 @@ import { ShoppingCartButton } from './components/shopping-cart-button';
 import { ShoppingCart } from './shopping-cart';
 
 export class ProductDetails {
-  page: Page;
-  shoppingCartButton: ShoppingCartButton;
-  private productName: string;
+  readonly page: Page;
+  readonly shoppingCartButton: ShoppingCartButton;
+  private readonly productName: string;
 
   constructor(page: Page, productName: string) {
     this.page = page;

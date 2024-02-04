@@ -1,9 +1,9 @@
 import { Locator, Page } from '@playwright/test';
 
 export class ShoppingCartButton {
-  page: Page;
-  badge: Locator;
-  button: Locator;
+  readonly page: Page;
+  readonly badge: Locator;
+  readonly button: Locator;
 
   constructor(page: Page) {
     this.page = page;

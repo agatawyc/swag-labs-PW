@@ -1,10 +1,10 @@
 import { Locator, Page } from '@playwright/test';
 
 export class Login {
-  username: Locator;
-  password: Locator;
-  loginButton: Locator;
-  page: Page;
+  readonly username: Locator;
+  readonly password: Locator;
+  readonly loginButton: Locator;
+  readonly page: Page;
 
   constructor(page: Page) {
     this.username = page.locator('[data-test="username"]');
