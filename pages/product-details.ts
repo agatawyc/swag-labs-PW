@@ -1,5 +1,6 @@
-import { Locator, Page } from '@playwright/test';
+import { Page } from '@playwright/test';
 import { ShoppingCartButton } from './components/shopping-cart-button';
+import { ShoppingCart } from './shopping-cart';
 
 export class ProductDetails {
   page: Page;
@@ -15,5 +16,10 @@ export class ProductDetails {
   async addProductToCart() {
     const product = this.productName.replaceAll(' ', '-').toLowerCase();
     await this.page.locator(`[data-test="add-to-cart-${product}"]`).click();
+  }
+
+  async openShoppingCart() {
+    await this.shoppingCartButton.button.click();
+    return new ShoppingCart(this.page);
   }
 }

@@ -1,5 +1,7 @@
-import { Locator, Page } from '@playwright/test';
+import { Page } from '@playwright/test';
 import { ShoppingCartButton } from './components/shopping-cart-button';
+import { ProductDetails } from './product-details';
+import { ShoppingCart } from './shopping-cart';
 
 export class Inventory {
   page: Page;
@@ -23,5 +25,11 @@ export class Inventory {
     await this.page
       .locator('.inventory_item_name', { hasText: productName })
       .click();
+    return new ProductDetails(this.page, productName);
+  }
+
+  async openShoppingCart() {
+    await this.shoppingCartButton.button.click();
+    return new ShoppingCart(this.page);
   }
 }
