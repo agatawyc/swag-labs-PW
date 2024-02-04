@@ -16,7 +16,12 @@ export class Inventory {
 
   async addProductToCart(productName: string) {
     productName = productName.replaceAll(' ', '-').toLowerCase();
-    console.log(productName);
     await this.page.locator(`[data-test="add-to-cart-${productName}"]`).click();
+  }
+
+  async openProductDetails(productName: string) {
+    await this.page
+      .locator('.inventory_item_name', { hasText: productName })
+      .click();
   }
 }
